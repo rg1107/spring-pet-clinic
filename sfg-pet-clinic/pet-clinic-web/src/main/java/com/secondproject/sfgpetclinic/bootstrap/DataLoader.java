@@ -28,14 +28,12 @@ public class DataLoader implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
 		Owner owner1 = new Owner();
-		owner1.setId(1L);
 		owner1.setFirstName("Rahul");
 		owner1.setLastName("Gite");
 		
 		ownerService.save(owner1);
 		
 		Owner owner2 = new Owner();
-		owner2.setId(2L);
 		owner2.setFirstName("Aishwarya");
 		owner2.setLastName("Gite");
 		
@@ -44,14 +42,12 @@ public class DataLoader implements CommandLineRunner {
 		System.out.println("Loaded Owners...");
 		
 		Vet vet1 = new Vet();
-		vet1.setId(1L);
 		vet1.setFirstName("Nimish");
 		vet1.setLastName("Gite");
 		
 		vetService.save(vet1);
 		
 		Vet vet2 = new Vet();
-		vet2.setId(2L);
 		vet2.setFirstName("Sushma");
 		vet2.setLastName("Gite");
 		
