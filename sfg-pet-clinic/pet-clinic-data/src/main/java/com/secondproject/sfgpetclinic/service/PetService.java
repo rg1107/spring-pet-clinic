@@ -1,12 +1,8 @@
 package com.secondproject.sfgpetclinic.service;
 
-import java.util.Set;
 
 import com.secondproject.sfgpetclinic.model.Pet;
 
-public interface PetService {
+public interface PetService extends CrudService<Pet, Long>{
 	
-	Pet findbyId(Long id);
-	Pet save(Pet pet);
-	Set<Pet> findAll();
 }
