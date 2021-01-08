@@ -5,8 +5,9 @@ import java.util.Set;
 import com.secondproject.sfgpetclinic.model.Owner;
 import com.secondproject.sfgpetclinic.model.Pet;
 import com.secondproject.sfgpetclinic.service.CrudService;
+import com.secondproject.sfgpetclinic.service.PetService;
 
-public class PetServiceMap extends AbstractMapService<Pet,Long> implements CrudService<Pet,Long> {
+public class PetServiceMap extends AbstractMapService<Pet,Long> implements PetService {
 
 	@Override
 	public Set<Pet> findAll() {
