@@ -10,10 +10,12 @@ import com.secondproject.sfgpetclinic.model.Pet;
 import com.secondproject.sfgpetclinic.model.PetType;
 import com.secondproject.sfgpetclinic.model.Speciality;
 import com.secondproject.sfgpetclinic.model.Vet;
+import com.secondproject.sfgpetclinic.model.Visit;
 import com.secondproject.sfgpetclinic.service.OwnerService;
 import com.secondproject.sfgpetclinic.service.PetTypeService;
 import com.secondproject.sfgpetclinic.service.SpecialtyService;
 import com.secondproject.sfgpetclinic.service.VetService;
+import com.secondproject.sfgpetclinic.service.VisitService;
 import com.secondproject.sfgpetclinic.service.map.OwnerMapService;
 import com.secondproject.sfgpetclinic.service.map.VetMapService;
 
@@ -24,15 +26,16 @@ public class DataLoader implements CommandLineRunner {
 	private final VetService vetService;
 	private final PetTypeService petTypeService;
 	private final SpecialtyService specialtyService;
-
+	private final VisitService visitService;
 	
 	public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService,
-			SpecialtyService specialtyService) {
-		super();
+			SpecialtyService specialtyService, VisitService visitService) {
+		
 		this.ownerService = ownerService;
 		this.vetService = vetService;
 		this.petTypeService = petTypeService;
 		this.specialtyService = specialtyService;
+		this.visitService = visitService;
 	}
 
 
@@ -107,6 +110,13 @@ public class DataLoader implements CommandLineRunner {
 		
 		
 		ownerService.save(owner2);
+		
+		Visit catVisit = new Visit();
+		catVisit.setPet(tuktukPet);
+		catVisit.setDate(LocalDate.now());
+		catVisit.setDescription("Sneezy Kitty");
+		
+		visitService.save(catVisit);
 		
 		System.out.println("Loaded Owners...");
 		
