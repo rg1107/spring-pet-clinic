@@ -10,7 +10,7 @@ import com.secondproject.sfgpetclinic.service.CrudService;
 import com.secondproject.sfgpetclinic.service.PetService;
 
 @Service
-public class PetServiceMap extends AbstractMapService<Pet,Long> implements PetService {
+public class PetMapService extends AbstractMapService<Pet,Long> implements PetService {
 
 	@Override
 	public Set<Pet> findAll() {

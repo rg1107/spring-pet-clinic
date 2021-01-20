@@ -14,8 +14,8 @@ import com.secondproject.sfgpetclinic.service.OwnerService;
 import com.secondproject.sfgpetclinic.service.PetTypeService;
 import com.secondproject.sfgpetclinic.service.SpecialtyService;
 import com.secondproject.sfgpetclinic.service.VetService;
-import com.secondproject.sfgpetclinic.service.map.OwnerServiceMap;
-import com.secondproject.sfgpetclinic.service.map.VetServiceMap;
+import com.secondproject.sfgpetclinic.service.map.OwnerMapService;
+import com.secondproject.sfgpetclinic.service.map.VetMapService;
 
 @Component
 public class DataLoader implements CommandLineRunner {
