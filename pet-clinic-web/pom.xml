@@ -154,15 +154,9 @@
 	  						<pluginExecutions>
 	  							<pluginExecution>
 	  								<pluginExecutionFilter>
-	  									<groupId>
-	  										ro.isdc.wro4j
-	  									</groupId>
-	  									<artifactId>
-	  										wro4j-maven-plugin
-	  									</artifactId>
-	  									<versionRange>
-	  										[1.8.0,)
-	  									</versionRange>
+	  									<groupId>ro.isdc.wro4j</groupId>
+	  									<artifactId>wro4j-maven-plugin</artifactId>
+	  									<versionRange>[1.8.0,)</versionRange>
 	  									<goals>
 	  										<goal>run</goal>
 	  									</goals>
